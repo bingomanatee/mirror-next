@@ -1,0 +1,44 @@
+.container {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 4rem;
+    font-size: 3rem;
+    font-family: "Times New Roman", Times, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    text-align: center;
+    color: rgba(200,0,0,0.2);
+}
+
+.mainButton {
+    width: 50vw;
+    height: 50vh;
+    background: rgba(255,255,255,0.5);
+    border: none;
+    font-size: 4rem;
+}
+
+.farmer {
+    height: 50vh;
+}

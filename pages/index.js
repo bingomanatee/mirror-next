@@ -6,7 +6,7 @@ import storyMirror from "../lib/storyMirror";
 import Farmer from '../lib/Farmer'
 import GoOn from '../lib/GoOn';
 
-export default function Home({loaded, frameIndex, lineIndex, stories}) {
+export default function Home({loaded, frameIndex, lineIndex, activated, stories}) {
   const [lines, setLines] = useState([]);
   const [index, setIndex] = useState(0);
   const goonRef = useRef();
@@ -20,7 +20,8 @@ export default function Home({loaded, frameIndex, lineIndex, stories}) {
   }
 
   return (
-    <Farmer key={frameIndex} frameIndex={frameIndex} lineIndex={lineIndex} loaded={loaded} next={next}>
+    <Farmer key={frameIndex} activated={activated}
+            frameIndex={frameIndex} lineIndex={lineIndex} loaded={loaded} next={next}>
 
       <footer className={styles.footer}>
 

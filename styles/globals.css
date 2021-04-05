@@ -16,7 +16,8 @@ a {
 }
 
 html {
-  background-image: url('/back.png');
+  backgroud-color: #A4E4BC;
+  background-image: url('/back.jpg');
   background-size: cover;
 }
 
