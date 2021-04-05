@@ -21,7 +21,7 @@
   height: 100px;
   border-top: 1px solid #eaeaea;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -114,9 +114,18 @@
   height: 1em;
 }
 
+.legend {
+  font-family: "Times New Roman", Times, sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+}
+.farmer {
+  height: 50vh;
 }

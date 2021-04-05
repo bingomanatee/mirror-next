@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+html {
+  background-image: url('/back.png');
+  background-size: cover;
+}
+
+.fader {
+  -moz-transition: opacity 0.4s linear;
+  -o-transition: opacity 0.4s linear;
+  -webkit-transition: opacity 0.4s linear;
+  transition: opacity 0.4s linear;
+}
+
+.fader.fadedOut {
+  opacity: 0;
+}

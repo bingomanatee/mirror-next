@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="53px" viewBox="0 0 144 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>nav</title>
+    <g id="nav" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.539718094">
+        <path d="M71.5,0 C77.2852412,0 82.6374942,1.85384255 86.9951138,4.99988234 L73,5 L73,48 L86.9941146,48.000839 C82.636676,51.1464408 77.284799,53 71.5,53 C65.715201,53 60.363324,51.1464408 56.0058854,48.000839 L69,48 L69,5 L56.0048862,4.99988234 C60.3625058,1.85384255 65.7147588,0 71.5,0 Z M87.001108,5.00421125 C93.6640332,9.81741582 98,17.6523483 98,26.5 C98,35.3476517 93.6640332,43.1825842 87.001108,47.9957888 Z M54.9998366,5.7623911 L54.9998366,47.2376089 C48.9058086,42.3823825 45,34.8973165 45,26.5 C45,18.1026835 48.9058086,10.6176175 54.9998366,5.7623911 Z" id="Combined-Shape" fill="#32C5FF"></path>
+        <polygon id="next" fill="#32C5FF" transform="translate(122.500000, 26.500000) rotate(90.000000) translate(-122.500000, -26.500000) " points="122.5 5 144 48 101 48"></polygon>
+        <polygon id="back" fill="#32C5FF" transform="translate(21.500000, 26.500000) scale(-1, 1) rotate(90.000000) translate(-21.500000, -26.500000) " points="21.5 5 43 48 0 48"></polygon>
+    </g>
+</svg>
