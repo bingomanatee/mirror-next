@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
 
   console.log('val is ', val);
 
-  return <Component {...val} {...pageProps} storyMirror={storyMirror} />
+  return <Component {...val} {...pageProps} />
 }
 
 export default MyApp

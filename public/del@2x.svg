@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="16px" viewBox="0 0 14 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>del@2x</title>
+    <g id="del" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.463559878">
+        <polygon id="back-copy-2" fill="#E02020" transform="translate(7.000000, 8.000000) scale(-1, -1) rotate(90.000000) translate(-7.000000, -8.000000) " points="10.2608073 1 15 1 3.7722095 15 -1 14.9226552"></polygon>
+        <polygon id="back-copy-2" fill="#E02020" transform="translate(7.000000, 8.000000) scale(1, -1) rotate(90.000000) translate(-7.000000, -8.000000) " points="10.2608073 1 15 1 3.7722095 15 -1 15"></polygon>
+    </g>
+</svg>

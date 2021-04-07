@@ -5,6 +5,7 @@ import {useRouter} from 'next/router'
 import storyMirror from "../lib/storyMirror";
 import Farmer from '../lib/Farmer'
 import GoOn from '../lib/GoOn';
+import Link from 'next/link'
 
 export default function Home({loaded, frameIndex, lineIndex, activated, stories}) {
   const [lines, setLines] = useState([]);
@@ -24,7 +25,6 @@ export default function Home({loaded, frameIndex, lineIndex, activated, stories}
             frameIndex={frameIndex} lineIndex={lineIndex} loaded={loaded} next={next}>
 
       <footer className={styles.footer}>
-
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -35,6 +35,7 @@ export default function Home({loaded, frameIndex, lineIndex, activated, stories}
             <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo}/>
           </a>
         </div>
+
         <GoOn ref={goonRef}/>
       </footer>
     </Farmer>

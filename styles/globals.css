@@ -1,9 +1,12 @@
 html,
-body {
+body,
+#__next{
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  height: 100%;
+  overflow: hidden;
 }
 
 a {
@@ -30,4 +33,13 @@ html {
 
 .fader.fadedOut {
   opacity: 0;
+}
+.addRow {
+  margin: 0rem 0.5rem;
+  width: 3rem;
+  position: relative;
+}
+.addRow svg {
+  position: absolute;
+  top: 0.5rem;
 }
