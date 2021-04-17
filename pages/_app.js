@@ -1,13 +1,20 @@
 import {useState, useEffect} from 'react';
-
+import {Grommet, ResponsiveContext} from "grommet";
 import '../styles/globals.css'
 import storyMirror from "../lib/storyMirror";
-function MyApp({ Component, pageProps }) {
+import Backdrop from '../lib/Backdrop';
+import theme from '../lib/theme';
+import Messages from './Messages';
+
+function MyApp({Component, pageProps}) {
   const [val, setVal] = useState({});
+  const [messages, setMsg] = useState([]);
 
   useEffect(() => {
-    const sub = storyMirror.$subscribe(setVal);
-    console.log('status:', storyMirror.$my.status);
+    const sub = storyMirror.$subscribe((value) => {
+      setVal(value);
+      setMsg(value.messages);
+    });
     if (storyMirror.$my.status == 'initial') {
       storyMirror.$do.load();
     }
@@ -18,9 +25,21 @@ function MyApp({ Component, pageProps }) {
 
   }, [storyMirror])
 
-  console.log('val is ', val);
-
-  return <Component {...val} {...pageProps} />
+  return (
+    <Grommet theme={theme} full>
+      <ResponsiveContext.Consumer>{
+        (size) => {
+          return (
+            <Backdrop size={size}>
+              <Component {...val} size={size} {...pageProps} />
+              <Messages>{messages}</Messages>
+            </Backdrop>
+          )
+        }
+      }
+      </ResponsiveContext.Consumer>
+    </Grommet>
+  )
 }
 
 export default MyApp

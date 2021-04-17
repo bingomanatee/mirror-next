@@ -1,10 +1,20 @@
 .editor {
     height: 100%;
+    flex: 1;
     overflow-y: hidden;
     padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
+    max-width: 2000px;
     justify-content: stretch;
+}
+
+.editor__layout {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    height: 100%;
+    justify-content: center;
 }
 
 .editor h1 {
@@ -51,7 +61,7 @@
     display: flex;
     flex-direction: row;
     font-weight: normal;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: 1rem 3rem;
     margin: 0;
     align-items: baseline;
@@ -83,8 +93,22 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
+.stories h2 button.save-extra {
+    background-color: darkcyan;
+    color: lightgreen
+}
+
+.stories h2 button.danger {
+    background-color: pink;
+}
+
+.stories h2 button.danger-extra {
+    background-color: red;
+    color: lightPink;
+}
+
 .editor__formRow {
-    padding: 1rem;
+    padding: 0;
     margin: 1rem;
     font-size: 1.5rem !important;
     display: flex;
@@ -93,6 +117,11 @@
     font-family: "Droid Sans Mono", monospace;
     align-items: baseline;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.editor__formRow > * {
+    margin: 0.5rem 1.5rem;
 }
 
 .editor__formRow label {
@@ -101,13 +130,14 @@
 
 .editor__formRow input,
 .editor__formRow textarea {
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     font-size: 1.5rem;
     font-family: "Droid Sans Mono", monospace;
     padding: 0.5rem;
     flex: 1;
-    margin-right: 2rem;
+    margin-right: 5rem !important;
 }
+
 .editor__formRow input[type="number"] {
     mex-width: 4rem;
     flex: 0;
@@ -125,3 +155,4 @@
     border: none;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
+

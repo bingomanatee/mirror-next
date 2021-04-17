@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "react-farmer",
+  "private_key_id": "56d3b765420d766d284a97ad77ce367388b78872",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDlbvkr26L5YMho\nyFeRpxqCrFQb8XDoDJBtBuq47qludQq3iMMmNunN250DuZC/IsuoSzZs5mUcjxfQ\n6QnJ68UD42h2yiNxj1lQVEReqvUL4fmAOaYhDr1URsl9zRYG7slhxQalsCC9iUWE\ndwwz6Md3NTnJumaWE8JINk3HOsNCK8OzNZhC/y3H0kaGHkqT1T7IaXqBdfEos5oy\nzGsGZGQb7/bU4/Dss0LbeuUGN4V4IWumEHgui7t+y9tazcRgjOy5NsmUG6rPmfEx\nuPRHTaCAg7AykkNeijMfbfjI8qtfF1vWhtOtAc1JuVrd/BEF0AUIQo25Wl65tNGr\nN710QkX3AgMBAAECggEAEkP691hliagAXIMyoYhlrmiMy6q1m+vAJcXqsu1hNMeB\nomnza1vs0jQ9NFo2IVliUFQokZPoEdV8hme/HUG1biFRJD/kgXpxmFkVFlpS5u7H\nH8O3K6OSRB7clLTan5OsGaoHZPJ4MM64Z5rYsFtEYgOtRZee6izJh1k3aPiPKfnO\nZCiPnfKsdmt70DwioQfn5amdQh/5SHSC9/MCHYSCzs3ACoE4vPE8wmLI8Uxx3L0f\nwa1eIwdN5HGwAIBXo+Vlaf6pzvetpi2k2inupUSIk3q7oFjFP24J7pq7O87lbFPG\nklPGT/8Nrc8O9kNVpaersDuVQKzRB+nipGQYvJfssQKBgQD0Y5k5+KN3v9NdiO9g\nrRPBGh6ECEz0qe2lqkIDv5ear3TKwAF2zCf4Jp4Ec6ilAtCM69HeP3XhNalbOAbw\nHubmcpf3qUDiouQvqwyQ+v+nhpR5ZZsHOf68YyYirNeRz4+Zapu8whbgGDuq4+jk\n299Y+bYMdWoxQQkX4lBGqx64pwKBgQDwVXn7/KxORv+owFgo95Vos7CCDaVZAxB3\nEw3Y3L0FUUV6Owt76PQ1dHyLljHKlyv/V2VMduCezlHNbfPwI3isMlo8YiiLleq4\niC4zTVOAB2NGDmAVZUXYsCD7/IzfKV2qhYN7BdY2VRnZnikPaXCkmoUSfK3hPJHK\nsuk5XudiMQKBgASleB5QCduW/A/FMLfn0n5TXs0n0z67lFcX+5VSqTE5sMDCEcUO\ncJwZL9vpzwUEHq7vNNhC4JzdhlDDqe4ayE0NVLJSt3cXnbsCR4TiIMYwmtYMBnyG\nr78pK2pxWs/c4GAMVNWr4v9ztn6zQpRHUeHBLaLjAJfbIq8fkGMnkbf1AoGAQdrK\nMDhOZqyhxXXfMmqVMDl8tkZS9o8WZep8st3ZlaltZk7jmLJ+qF8g+YbQYfkGf1NN\nWKSCbEGQvL/SRg0SNe0eOMmU3prX1HTMZBZeOQjNNRcfUP2NJBEvGJ1dZJELL3yi\nSIWS6xRqnuztx2FXEmOc7zHm238jW+2mZqgQsyECgYAiCGn9gHFjQbziAeFajBFL\nQoIdLmzsUpn2+jf6T7xdEFnrBYsg7C39SC7SqjW9h6spiL+/oXNpXTvR5ypyWBxI\nH/wbCornqzUlwqApPwV8E+kLw3ocqlpsAm2zwKlOWMEPVTUABhYJcR1MCx0Ve9Ye\nhf7ys9ZiesuheTnDM8ZqDw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "react-farmer-user@react-farmer.iam.gserviceaccount.com",
+  "client_id": "101138664915741010331",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/react-farmer-user%40react-farmer.iam.gserviceaccount.com"
+}
