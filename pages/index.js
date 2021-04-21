@@ -59,7 +59,7 @@ export default function Home({size}) {
         columns={getCols(size)}
       >
         <Option gridArea="narrative">
-          <Link href="/narrative">Narrative: Why there is Mirror</Link>
+          Narrative: Why there is Mirror
         </Option>
         <Option gridArea="mirror">
           About Mirror: examples, guide, and API
