@@ -20,6 +20,7 @@
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-sizeme": "^3.0.1",
     "stopwords": "^0.0.9",
     "styled-components": "^5.2.3",
     "svg-react-loader": "^0.4.6",

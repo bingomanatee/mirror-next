@@ -1,4 +1,9 @@
+const UNSPLASH_ACCESS = process.env.UNSPLASH_ACCESS;
+
 module.exports = {
+  env: {
+    UNSPLASH_ACCESS
+  },
   webpack: (config, options) => {
     config.module.rules.push(
       {

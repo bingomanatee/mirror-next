@@ -1,9 +1,13 @@
 import narrativeMirror from '../lib/narratveMirror';
-import {useState, useEffect} from 'react';
-import {Box, Heading, Grid, Text, Button} from "grommet";
+import { useState, useEffect } from 'react';
+import { Box, Heading, Grid, Text, Button } from "grommet";
 import { useRouter } from 'next/router'
+import ComicPanel from '../lib/views/ComicPanel';
+import { withSize } from 'react-sizeme';
 
-export default function ({stories, size}) {
+const ComicPanelSized = withSize()(ComicPanel);
+
+export default function Narrative ({stories, size}) {
 
   const [nm, setNM] = useState(narrativeMirror());
   const [val, setVal] = useState({});
@@ -18,9 +22,15 @@ export default function ({stories, size}) {
   useEffect(() => {
     if (stories && stories.length && !nm.$my.currentStoryId) {
       const firstStory = stories.reduce((first, next) => {
-        if (!first) return next;
-        if (!next.id) return first;
-        if (next.order < first.order) return next;
+        if (!first) {
+          return next;
+        }
+        if (!next.id) {
+          return first;
+        }
+        if (next.order < first.order) {
+          return next;
+        }
         return first;
       }, null);
       nm.$do.setCurrentStoryId(firstStory ? firstStory.id : null)
@@ -28,7 +38,9 @@ export default function ({stories, size}) {
   }, [stories])
 
   useEffect(() => {
-    if (nm && size) nm.$do.setSize(size);
+    if (nm && size) {
+      nm.$do.setSize(size);
+    }
   }, [size, nm])
 
   const router = useRouter()
@@ -45,22 +57,18 @@ export default function ({stories, size}) {
         </Heading>
       </Box>
 
-      <Box gridArea="text">
-        {nm.$do.currentText().map(t => (
-          <Box key={t} margin="medium" fill="horizontal">
-            <Text>{t}</Text>
-          </Box>
-        ))}
+      <Box gridArea="text" overflow="auto">
+        <ComicPanelSized text={nm.$do.currentText()}/>
       </Box>
 
       <Box gridArea="speaker"
-      background={{
-        image: 'url(/cg@0.5x.jpg)',
-        position: 'center',
-        repeat: 'no-repeat',
-        color: 'black',
-        size: 'cover'
-      }}
+           background={{
+             image: 'url(/cg@0.5x.jpg)',
+             position: 'center',
+             repeat: 'no-repeat',
+             color: 'black',
+             size: 'cover'
+           }}
       >
 
       </Box>
@@ -72,11 +80,13 @@ export default function ({stories, size}) {
            align="stretch">
         <Button plain={false}
                 onClick={() => router.push('/')}
-        >Home</Button>
+        >Home
+        </Button>
         <Button primary
                 onClick={nm.$do.next}
-        plain={false}
-        >Next</Button>
+                plain={false}
+        >Next
+        </Button>
       </Box>
     </Grid>
   )

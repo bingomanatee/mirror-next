@@ -2,7 +2,7 @@ import styles from '../styles/Home2.module.css'
 import {useRouter} from 'next/router'
 import {Box, Grid} from 'grommet';
 import Link from 'next/link';
-import Option from "../lib/Option";
+import Option from "../lib/views/Option";
 
 function getAreas(size) {
 

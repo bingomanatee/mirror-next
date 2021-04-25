@@ -3,7 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 
-import GoOn from '../lib/GoOn';
+import GoOn from '../lib/views/GoOn';
 
 export default function Home() {
   const [frame, setFrame] = useState(null);

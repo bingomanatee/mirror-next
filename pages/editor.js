@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import storyMirror from "../lib/storyMirror";
 import styles from './../styles/Editor.module.css';
-import StoryEditor from "../lib/StoryEditor";
+import StoryEditor from "../lib/views/StoryEditor";
 import sortBy from 'lodash/sortBy';
 import {Accordion} from "grommet";
 
