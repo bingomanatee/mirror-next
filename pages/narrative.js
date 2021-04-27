@@ -58,7 +58,7 @@ export default function Narrative ({stories, size}) {
       </Box>
 
       <Box gridArea="text" overflow="auto">
-        <ComicPanelSized text={nm.$do.currentText()}/>
+        <ComicPanelSized nm={nm}/>
       </Box>
 
       <Box gridArea="speaker"

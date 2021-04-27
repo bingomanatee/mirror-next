@@ -1,0 +1,27 @@
+.speech {
+    background: rgba(159, 216, 141, 0.85);
+    padding: 0.25rem;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.speech p {
+    margin: 0;
+}
+
+.speech.current {
+    background: rgba(159, 216, 141, 1);
+}
+
+.textFrame {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid darkgreen;
+    border-bottom: 1px solid darkgreen;
+    background-color: rgba(0,0,0,0.5);
+}

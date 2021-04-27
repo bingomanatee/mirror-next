@@ -1,55 +1,40 @@
-import styled from 'styled-components';
-import chunk from 'lodash/chunk'
-import { Box, Text } from "grommet";
-import stringToImage from "../stringToImage";
+import ComicFrame from "./ComicFrame";
+import ComicRow from "./ComicRow";
+import lGet from 'lodash/get';
+import {Layer} from "grommet";
 import { useEffect, useState } from "react";
+import ComicOverlay from "./ComicOverlay";
 
-const ComicFrame = ({children}) => (<Box className="comic-row" fill="horizontal">
-  {children}
-</Box>)
+const ComicPanel = ({
+                      nm,
+                      size
+                    }) => {
 
-const ComicPane = ({line}) => {
-  const [image, setImage] = useState('');
+  const [chunks, setChunks] = useState([]);
 
   useEffect(() => {
-    stringToImage(line)
-      .then(({out}) => {
-        const firstWord = [...Object.keys(out)][0];
-        if (firstWord) {
-          const imageData = out[firstWord][0];
-          setImage(imageData.regular);
-        }
-      });
-  }, [line]);
+    const sub = nm.$subscribe({
+      next(value) {
+        setChunks(nm.$do.chunks());
+      }
+    });
+    return () => sub.unsubscribe()
+  }, [nm]);
 
-  console.log(line, 'image:', image);
-  return (
-    <Box className="comic-frame" margin="small" background={
-      image ? {
-        image: 'url(' + image + ')'
-      } : 'brand'
-    } fill="horizontal">
-      <div className="speech">
-        <Text pad="small" as="p">{line}</Text>
-      </div>
-    </Box>
-  );
-}
+  useEffect(() => {
+    if (lGet(size, 'width') !== nm.$my.pageSize.width) {
+      nm.$do.setPageSize(size)
+    }
+  }, [size])
 
-const ComicRow = ({textChunk}) => {
-  return (<Box className="comic-row" direction="row" height="200rem" align="stretch" justify="stretch">
-    {textChunk.map(line => (<ComicPane line={line}/>))}
-  </Box>)
-}
-
-const ComicPanel = ({text, size}) => {
-  const maxPanels = Math.max(1, Math.floor(size.width / 400));
-  const chunks = chunk(text, maxPanels);
-  console.log('text:', text, 'max', maxPanels, 'size:', size);
-  console.log('comicPanel chunks:', chunks);
-  return <ComicFrame>
-    {chunks.map((textChunk) => (<ComicRow textChunk={textChunk}/>))}
+  return <>
+    <ComicFrame>
+    {chunks.map((textChunk) => (<ComicRow key={textChunk[0].line} textChunk={textChunk}/>))}
   </ComicFrame>
+<Layer full={true} plain>
+  <ComicOverlay nm={nm} />
+</Layer>
+    </>
 
 }
 
