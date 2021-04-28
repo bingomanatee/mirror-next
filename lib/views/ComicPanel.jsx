@@ -11,11 +11,12 @@ const ComicPanel = ({
                     }) => {
 
   const [chunks, setChunks] = useState([]);
-
+  const [currentLine, setCurrentLine] = useState('');
   useEffect(() => {
     const sub = nm.$subscribe({
       next(value) {
         setChunks(nm.$do.chunks());
+        setCurrentLine(nm.$do.currentLine());
       }
     });
     return () => sub.unsubscribe()
@@ -31,9 +32,12 @@ const ComicPanel = ({
     <ComicFrame>
     {chunks.map((textChunk) => (<ComicRow key={textChunk[0].line} textChunk={textChunk}/>))}
   </ComicFrame>
-<Layer full={true} plain>
-  <ComicOverlay nm={nm} />
-</Layer>
+    {currentLine && (
+      <Layer full={true} plain>
+        <ComicOverlay nm={nm} currentLine={currentLine} />
+      </Layer>
+    )}
+
     </>
 
 }

@@ -10,9 +10,10 @@ const ComicPane = ({line}) => {
 
   return (
     <Box margin="0.25rem 0.5rem" id={'frame-' + line.line} background={
-      image ? {
-        image: 'url(' + image + ')'
-      } : 'brand'
+     {
+        color: 'brand',
+        image: image ?  'url(' + image + ')': '',
+      }
     } fill="horizontal">
       <div className={classes.speech}>
         <Text pad="small" as="p" className="speech-line">{line.line}</Text>

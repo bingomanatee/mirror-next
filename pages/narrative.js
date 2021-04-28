@@ -4,6 +4,7 @@ import { Box, Heading, Grid, Text, Button } from "grommet";
 import { useRouter } from 'next/router'
 import ComicPanel from '../lib/views/ComicPanel';
 import { withSize } from 'react-sizeme';
+import EnableAudio from "../lib/views/EnableAudio";
 
 const ComicPanelSized = withSize()(ComicPanel);
 
@@ -33,7 +34,8 @@ export default function Narrative ({stories, size}) {
         }
         return first;
       }, null);
-      nm.$do.setCurrentStoryId(firstStory ? firstStory.id : null)
+      nm.$do.setCurrentStoryId(firstStory ? firstStory.id : null);
+      console.log('--- playing from', firstStory);
     }
   }, [stories])
 
@@ -58,7 +60,9 @@ export default function Narrative ({stories, size}) {
       </Box>
 
       <Box gridArea="text" overflow="auto">
-        <ComicPanelSized nm={nm}/>
+        <EnableAudio nm={nm}>
+          <ComicPanelSized nm={nm}/>
+        </EnableAudio>
       </Box>
 
       <Box gridArea="speaker"
