@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import stringToImage from "../stringToImage";
 import { Box, Text } from "grommet";
 import classes from "../../styles/Comic.module.css";
 import shuffle from "lodash/shuffle";

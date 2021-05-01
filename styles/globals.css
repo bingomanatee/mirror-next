@@ -51,3 +51,8 @@ html {
 .invisible {
   visibility: hidden;
 }
+
+h1, h2, h3 {
+  letter-spacing: -1px;
+  word-spacing: 2px;
+}

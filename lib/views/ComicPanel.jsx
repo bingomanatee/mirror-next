@@ -1,7 +1,7 @@
 import ComicFrame from "./ComicFrame";
 import ComicRow from "./ComicRow";
 import lGet from 'lodash/get';
-import {Layer} from "grommet";
+import {Layer, Box} from "grommet";
 import { useEffect, useState } from "react";
 import ComicOverlay from "./ComicOverlay";
 
@@ -12,11 +12,15 @@ const ComicPanel = ({
 
   const [chunks, setChunks] = useState([]);
   const [currentLine, setCurrentLine] = useState('');
+  const [lineIndex, setLineIndex] = useState(0);
+  const [currentTitle, setCurrentTitle] = useState('');
   useEffect(() => {
     const sub = nm.$subscribe({
       next(value) {
         setChunks(nm.$do.chunks());
         setCurrentLine(nm.$do.currentLine());
+        setCurrentTitle(nm.$do.currentTitle());
+        setLineIndex(value.lineIndex);
       }
     });
     return () => sub.unsubscribe()
@@ -34,7 +38,9 @@ const ComicPanel = ({
   </ComicFrame>
     {currentLine && (
       <Layer full={true} plain>
-        <ComicOverlay nm={nm} currentLine={currentLine} />
+        <Box fill="true">
+          <ComicOverlay nm={nm} lineIndex={lineIndex} currentTitle={currentTitle} currentLine={currentLine} />
+        </Box>
       </Layer>
     )}
 
