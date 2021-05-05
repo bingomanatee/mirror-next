@@ -15,7 +15,7 @@ function MyApp({Component, pageProps}) {
       setVal(value);
       setMsg(value.messages);
     });
-    if (storyMirror.$my.status == 'initial') {
+    if (storyMirror.$my.status === 'initial') {
       storyMirror.$do.load();
     }
 

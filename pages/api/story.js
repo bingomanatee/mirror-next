@@ -1,9 +1,21 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import  {getStory} from './../../lib/firebase';
+
+import getDB from "../../lib/firebase-db";
 
 export default (req, res) => {
-  getStory((doc) => {
-    res.statusCode = 200
-    res.json(doc)
-  })
+  const query = getDB()
+    .collection('farm')
+    .orderBy('order', 'asc')
+    .get()
+    .then((snap) => {
+      let story = [];
+      snap.forEach((record) => {
+        story.push({id: record.id, ...record.data()})
+      })
+      res.status(200).json(story);
+    })
+    .catch((err) => {
+      console.log('error getting story:', err.message);
+      res.status(5000).send(err.message);
+    })
 }
