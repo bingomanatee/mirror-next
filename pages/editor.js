@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import storyMirror from "../lib/storyMirror";
+import storyMirror from "../lib/mirrors/storyMirror";
 import styles from './../styles/Editor.module.css';
 import StoryEditor from "../lib/views/StoryEditor";
 import sortBy from 'lodash/sortBy';

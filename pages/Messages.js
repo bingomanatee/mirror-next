@@ -1,6 +1,6 @@
 import {Layer, Text, Box} from 'grommet';
 import {useState, useEffect} from 'react';
-import storyMirror from "../lib/storyMirror";
+import storyMirror from "../lib/mirrors/storyMirror";
 
 export default function Messages({children}) {
   if (!(Array.isArray(children) && children.length)) return '';

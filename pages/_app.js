@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {Grommet, ResponsiveContext} from "grommet";
 import '../styles/globals.css'
-import storyMirror from "../lib/storyMirror";
+import storyMirror from "../lib/mirrors/storyMirror";
 import Backdrop from '../lib/views/Backdrop';
 import theme from '../lib/theme';
 import Messages from './Messages';

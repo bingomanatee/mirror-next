@@ -1,4 +1,4 @@
-import narrativeMirror from '../lib/narratveMirror';
+import narrativeMirror from '../lib/mirrors/narratveMirror';
 import { useState, useEffect } from 'react';
 import { Box, Heading, Grid, Text, Button } from "grommet";
 import { useRouter } from 'next/router'
