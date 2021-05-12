@@ -1,5 +1,6 @@
 import { Box, Button } from "grommet";
 import React, { useEffect, useState } from "react";
+import {Play} from './NavButtons';
 
 export default ({nm, children}) => {
   const [audio, setAudio] = useState('unknown');
@@ -26,7 +27,7 @@ export default ({nm, children}) => {
 
   if (audio === 'available') {
     return <Box>
-      <Button primary onClick={() => nm.$do.setAudioEnabled(true)} isPlain={false}>Play Narrative</Button>
+      <Play onClick={() => nm.$do.setAudioEnabled(true)} i>Play Narrative</Play>
     </Box>
   }
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="79px" viewBox="0 0 102 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>last-hl</title>
+    <defs>
+        <path d="M99.2575856,0 L79,75 L52,75 L56.339,58.934 L0,75 L20.5938239,0 L63.03,34.164 L72.2575856,0 L99.2575856,0 Z" id="path-1"></path>
+        <filter x="-10.6%" y="-14.0%" width="121.2%" height="128.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="7" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.440614073   0 0 0 0 1  0 0 0 0.547721809 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="last-hl" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M56.314,59.028 L54.788,64.677 L10.8100001,77.6866408 L-3.55271368e-15,75.2696414 L56.314,59.028 Z" id="Combined-Shape" fill="#5D789C"></path>
+        <polygon id="Rectangle-Copy-5" fill="#5D789C" points="99.2575856 -7.10542736e-15 102 6 83.8543111 78.6866408 60.8140469 78.6866408 52 75 79 75"></polygon>
+        <g id="Combined-Shape" fill="black" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="79px" viewBox="0 0 82 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>pause-active@2x</title>
+    <g id="pause-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Rectangle-Copy-2" fill="#8E6117" points="79.2575856 7.10542736e-15 82 6 63.8543111 78.6866408 40.8140469 78.6866408 32 75 59 75"></polygon>
+        <path d="M47.2575856,7.10542736e-15 L50.799,5.397 L32,75 L34.008,75 L33.0911611,78.6866408 L10.0026742,78.6866408 L3.19744231e-14,75 L27,75 L47.2575856,7.10542736e-15 Z" id="Combined-Shape" fill="#8E6117"></path>
+        <polygon id="Rectangle" fill="#DFFB6F" points="52.2575856 1.42108547e-14 79.2575856 1.42108547e-14 59 75 32 75"></polygon>
+        <polygon id="Rectangle-Copy" fill="#DFFB6F" points="20.2575856 1.42108547e-14 47.2575856 1.42108547e-14 27 75 0 75"></polygon>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "id": "RKXdLZZXuSqlNMHNAxTS",
+  "skips": [],
+  "text": [
+    "What you expect state to be depends on your heritage as a developer.",
+    "Backend-centric developers expect ACID, transactions and schema.",
+    "Frontend-centric developers expect the same features as ordinary arrays and script objects.",
+    "Whatever your background you will find the experience of using Redux to be disappointing and tedious. ",
+    "Modern developers have a right to demand more from an industry standard than Redux provides."
+  ],
+  "image": [
+    "https://images.unsplash.com/photo-1604964432806-254d07c11f32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJ8ZW58MHx8fHwxNjE5ODExMzIz&ixlib=rb-1.2.1&q=80&w=400",
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHx0cmFuc2FjdGlvbnN8ZW58MHx8fHwxNjE5ODExMzI3&ixlib=rb-1.2.1&q=80&w=400",
+    "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJzfGVufDB8fHx8MTYxOTgxMTMyNw&ixlib=rb-1.2.1&q=80&w=400",
+    "https://images.unsplash.com/photo-1533858602901-34c7b371015a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkaXNhcHBvaW50aW5nfGVufDB8fHx8MTYxOTgxMTMzOA&ixlib=rb-1.2.1&q=80&w=400",
+    "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJzfGVufDB8fHx8MTYxOTgxMTMyNw&ixlib=rb-1.2.1&q=80&w=400"
+  ],
+  "title": "State is a funny thing",
+  "primaryImage": "images/slides/data.jpg",
+  "order": 0
+}

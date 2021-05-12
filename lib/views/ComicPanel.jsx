@@ -34,11 +34,11 @@ const ComicPanel = ({
 
   return <>
     <ComicFrame>
-    {chunks.map((textChunk) => (<ComicRow key={textChunk[0].line} textChunk={textChunk}/>))}
+    {chunks.map((textChunk) => (<ComicRow key={textChunk[0].line.text} textChunk={textChunk}/>))}
   </ComicFrame>
     {currentLine && (
       <Layer full={true} plain>
-        <Box fill="true">
+        <Box fill={true}>
           <ComicOverlay nm={nm} lineIndex={lineIndex} currentTitle={currentTitle} currentLine={currentLine} />
         </Box>
       </Layer>

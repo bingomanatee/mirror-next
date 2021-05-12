@@ -5,20 +5,12 @@ import { useRouter } from 'next/router'
 import ComicPanel from '../lib/views/ComicPanel';
 import { withSize } from 'react-sizeme';
 import EnableAudio from "../lib/views/EnableAudio";
+import WithStore from "../lib/views/withStore";
 
 const ComicPanelSized = withSize()(ComicPanel);
 
-export default function Narrative ({stories, size}) {
-
-  const [nm, setNM] = useState(narrativeMirror());
-  const [val, setVal] = useState({});
-
-  useEffect(() => {
-    if (nm) {
-      const sub = nm.$subscribe(setVal);
-      return () => sub.unsubscribe();
-    }
-  }, [nm])
+// note - size here is the Grommet size - not the withSize() size definition
+function Narrative({stories, size, nm}) {
 
   useEffect(() => {
     if (stories && stories.length && !nm.$my.currentStoryId) {
@@ -35,15 +27,8 @@ export default function Narrative ({stories, size}) {
         return first;
       }, null);
       nm.$do.setCurrentStoryId(firstStory ? firstStory.id : null);
-      console.log('--- playing from', firstStory);
     }
   }, [stories])
-
-  useEffect(() => {
-    if (nm && size) {
-      nm.$do.setSize(size);
-    }
-  }, [size, nm])
 
   const router = useRouter()
   return (<Grid
@@ -66,32 +51,42 @@ export default function Narrative ({stories, size}) {
       </Box>
 
       <Box gridArea="speaker"
-           background={{
-             image: 'url(/cg@0.5x.jpg)',
-             position: 'center',
-             repeat: 'no-repeat',
-             color: 'black',
-             size: 'cover'
-           }}
+        background={{
+          image: 'url(/cg@0.5x.jpg)',
+          position: 'center',
+          repeat: 'no-repeat',
+          color: 'black',
+          size: 'cover'
+        }}
       >
 
       </Box>
 
       <Box gridArea="controls" direction="row"
-           justify="between"
-           pad="medium"
-           gap="medium"
-           align="stretch">
+        justify="between"
+        pad="medium"
+        gap="medium"
+        align="stretch">
         <Button plain={false}
-                onClick={() => router.push('/')}
+          onClick={() => router.push('/')}
         >Home
         </Button>
         <Button primary
-                onClick={nm.$do.next}
-                plain={false}
+          onClick={nm.$do.next}
+          plain={false}
         >Next
         </Button>
       </Box>
     </Grid>
   )
 }
+
+export default WithStore(Narrative, narrativeMirror, (val, nm) => ({
+    nm
+  }),
+  (props, store) => {
+    if (props.size && props.size !== store.$my.size) {
+      store.$do.setSize(props.size);
+    }
+  }
+);

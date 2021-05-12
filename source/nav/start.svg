@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="80px" viewBox="0 0 109 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>start</title>
+    <defs>
+        <path d="M104.357,0 L83.4853704,75 L31.98,57.563 L27,76 L-2.84217094e-14,76 L20.2575856,1 L47.2575856,1 L37.461,37.267 L104.357,0 Z" id="path-1"></path>
+        <filter x="-10.1%" y="-13.8%" width="120.1%" height="127.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="7" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.226098121 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="start" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M104.062,1.063 L109,6 L90,80 L31.278,60.164 L31.972,57.593 L83.4885251,75.2696414 L93.689,38.334 L104.062,1.063 Z" id="Combined-Shape" fill="#606060"></path>
+        <path d="M31.98,57.563 L36.56,59.114 L32,76 L32.105,76 L31,80 L10.0026742,79.6866408 L0,76 L27,76 L31.98,57.563 Z M47.2575856,1 L50.799,6.397 L43.347,33.988 L37.462,37.267 L47.2575856,1 Z" id="Combined-Shape" fill="#606060"></path>
+        <g id="Combined-Shape" fill="black" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="80px" viewBox="0 0 98 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>back@2x</title>
+    <defs>
+        <polygon id="path-1" points="0.728428425 51.0468229 92.357 0 71.4853704 75"></polygon>
+        <filter x="-11.5%" y="-14.0%" width="122.9%" height="128.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="6" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="7" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.226098121 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-Copy-2" fill="#606060" points="0.754315535 51 16.2799674 59.1515525 78 80 97 6 92 1 71.4885251 75.2696414"></polygon>
+        <g id="Path-2-Copy-2" fill="black" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

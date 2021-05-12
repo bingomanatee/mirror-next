@@ -16,7 +16,8 @@ describe('mirror-next', () => {
 
     it ('gets results', async() => {
       const {in: wordsIn, out: result} = await (sti('now is the time for all good men to come to the aid of their country', 4));
-      console.log('result:', result);
+     // console.log('result:', result);
+      expect(Array.isArray(result.country)).toBeTruthy();
     })
   })
 })

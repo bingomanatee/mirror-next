@@ -4,7 +4,7 @@ import getDB from "../../lib/firebase-db";
 
 export default (req, res) => {
   const query = getDB()
-    .collection('farm')
+    .collection('narrative')
     .orderBy('order', 'asc')
     .get()
     .then((snap) => {

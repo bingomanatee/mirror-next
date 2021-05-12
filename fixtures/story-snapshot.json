@@ -1,0 +1,182 @@
+[
+  {
+    "id": "RKXdLZZXuSqlNMHNAxTS",
+    "skips": [],
+    "text": [
+      "What you expect state to be depends on your heritage as a developer.\n",
+      "Backend-centric developers expect ACID, transactions and schema.",
+      "Frontend-centric developers expect the same features as ordinary arrays and script objects. ",
+      "Whatever your background you will find the experience of using Redux to be disappointing and tedious. ",
+      "Modern developers have a right to demand more from an industry standard than Redux provides. "
+    ],
+    "image": [
+      "https://images.unsplash.com/photo-1604964432806-254d07c11f32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJ8ZW58MHx8fHwxNjE5ODExMzIz&ixlib=rb-1.2.1&q=80&w=400",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHx0cmFuc2FjdGlvbnN8ZW58MHx8fHwxNjE5ODExMzI3&ixlib=rb-1.2.1&q=80&w=400",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJzfGVufDB8fHx8MTYxOTgxMTMyNw&ixlib=rb-1.2.1&q=80&w=400",
+      "https://images.unsplash.com/photo-1533858602901-34c7b371015a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkaXNhcHBvaW50aW5nfGVufDB8fHx8MTYxOTgxMTMzOA&ixlib=rb-1.2.1&q=80&w=400",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjQ4ODl8MHwxfHNlYXJjaHwxfHxkZXZlbG9wZXJzfGVufDB8fHx8MTYxOTgxMTMyNw&ixlib=rb-1.2.1&q=80&w=400"
+    ],
+    "title": "State is a funny thing",
+    "primaryImage": "images/slides/data.jpg",
+    "order": 0
+  },
+  {
+    "id": "utOiKoVOeCimIQw5zTWh",
+    "skips": [],
+    "text": [
+      "This is what I want my state engine to provide. ",
+      "Based on years of developing websites and applications for large and small operations. ",
+      "I want to be able to use normal functions -- methods -- to change state.",
+      "I want to be able to call methods from other methods.",
+      "I want control over how often the system broadcasts updates.",
+      "I want to ensure my fields only accept good values.",
+      "I want to be able to test my state system easily.",
+      "I want to be able to share my state across the app OR generate a local state for short term use."
+    ],
+    "order": "1",
+    "title": "Here are my criteria"
+  },
+  {
+    "id": "z8zKuYxShenFCAJYoT0I",
+    "title": "Redux",
+    "skips": [],
+    "text": [
+      "Redux is the default higher level state system for React. ",
+      "It is very unloved for some very good reasons. ",
+      "Redux is verbose.",
+      "It ritualizes what should be a simple function or method call with the unnecessary baggage of actions, multiplying the number of files required to create a store. ",
+      "Redux is schemaless.",
+      "It places the data it mutates as an unregulated argument and forfeits any opportunity to enforce standards or schema to state. ",
+      "Redux is asynchronous.",
+      "You cannot know the value of state after you call an action because the refresh of state in Redux is bound to component refresh.  ",
+      "This makes linear design extremely difficult without Saga; a high price for a basic tool of application design.",
+      "Redux is flat.",
+      "You cannot call an action from another action, so composing and orchestration is impossible. ",
+      "This removes a fundamental ability for developing complex actions from a developers toolkit -- the primary strategy for developing complex application",
+      "Redux is heirarchical. ",
+      "It's not possible to scope Redux to a component; transient state can really only be accomplished with hooks or native React state, creating an application whose control is split between two seperate paradigms. ",
+      "Redux is hard to test. ",
+      "Its design is so deeply fused into Reacts structure that testing it in isolation is extremely difficult. This is not in keeping with the way flux-based systems are supposed to behave. "
+    ],
+    "order": "2"
+  },
+  {
+    "id": "cdlNVcVqXp4JAtyv8FrR",
+    "order": "2.1",
+    "skips": [],
+    "text": [
+      "Saga adds interrupt-driven features at a terrible cost. ",
+      "Saga attempts to address the linear nature of Redux by adding non-linear side effects.",
+      "It requires significant expertise to use and can complicate your state system significantly.  ",
+      "Even so, it dodges some of the fundamental weaknesses of Redux.",
+      "Because Redux still doesn't have a schema under Saga, you don't observe field changes -- you piggyback on the actions that change them.",
+      "This is not only tedious but brittle. ",
+      "Further because actions are still atomic, the multiplying hooks of Saga create even more state changes that broadcast through the view system, degrading performance.",
+      "In React, actions and the broadcast of state updates are one and the same thing, creating a fundamental performance bottleneck that Saga only makes worse."
+    ],
+    "title": "Saga"
+  },
+  {
+    "id": "GYsCSlNZ9n53ODLja68X",
+    "order": "2.3",
+    "skips": [],
+    "title": "Hooks",
+    "text": [
+      "Hooks are a step forward but have limitations of their own",
+      "Under the hood, useState is just another reducer and has some of Redux's limitations as well. ",
+      "Just like Redux, updating state with Hooks is asynchronous.",
+      "The effect watching hook is in many ways really nice, but it doesn't obviate the fact that writing a simple update/examine/react procedure needs to be done in multiple functions which is clumsy and difficult to track. ",
+      "As a detached set of values and objects, hooks can't be detached from the view for testing.",
+      "The binding that Redux uses to transport state across multiple parts of the application aren't part of the hooks system. ",
+      "And the state updaters are atomic and bound in closure so you can't filter or observe values that pass through them."
+    ]
+  },
+  {
+    "id": "AHdhcrXEMWJrgmDJ4RUY",
+    "order": "2.4",
+    "text": [
+      "MobX is impressive but it has a huge footprint, and I didn't like the way it wrapped its way around react components. ",
+      "It does achieve observability, but it also in more recent editions used proxies which are not IE compatible. ",
+      "I'm not ready to make my code unusable on what is still a significant market especially in sectors like government. ",
+      "And fundamentally I don't like solutions that reinvent every aspect of javascript coding like Saga or MobX. ",
+      "It feels like they don't understand the fundamental strength of the existing language features so they try to reinvent everything."
+    ],
+    "title": "MobX",
+    "skips": []
+  },
+  {
+    "id": "wmqmT16ZFxMAlfvBnYUW",
+    "skips": [],
+    "order": "2.5",
+    "title": "The Redux Toolkit",
+    "text": [
+      "The Redux Toolkit is a major improvement over Redux.",
+      "Both the inclusion of Immer and the simplification of reducers are a great step forward.",
+      "However the presumption that state is a top-down sitewide thing is still present. ",
+      "And the lack of schema still exists here.",
+      "So while its probably the best flavor of Redux i've seen, its just the best evolution of a form of state management with some severe flaws in its fundamental assumptions.",
+      "That being said - if I can't convince you to use Mirror or Looking Glass Engine, please look into the redux toolkit and see if you find it makes your life easier. "
+    ]
+  },
+  {
+    "id": "6ql3Wlg8Gqg8h8Lqi8O5",
+    "order": "4",
+    "text": [
+      "I checked out third party solutions. Honestly almost all of them were pretty good and sped up my development process.",
+      "Formidable Labs' Freactal was inspiring but they were resistant to improvements and the more I worked with it the more its limitations became evident.",
+      "A friend turned me onto RxJS and I found it had a lot of tools for what I wanted but did not natively attach methods or actions to its streams.",
+      "Its worth noting that Angular uses RxJS extensively and well. ",
+      "But it doesn't integrate actions or schema by default so I wanted to add some tooling to the base RxJS ecosystem.",
+      "So I set about creating a interface around RxJS streams in a project I called Looking Glass Engine. "
+    ],
+    "skips": [],
+    "title": "And the rest"
+  },
+  {
+    "id": "wLTH8EysGeeDmhgp5lWL",
+    "skips": [],
+    "text": [
+      "I started working on a model using RxJS as the fundamental store of data.",
+      "Looking Glass Engine is the result of my first attempt.",
+      "It has the use patterns of a traditional Class-based object: fields and methods. ",
+      "Most importantly, LGE states are synchronous - when you change a stores' field, it is immediately readable on the store, even inside an action. ",
+      "However it is designed like RxJS Subjects to be observable and leverage RxJS' rich library of filters and modifiers. ",
+      "And it has transactional throttling allowing the designer control over how often the subscribers recieve updates. ",
+      "As good as LGE was, it accomplished these goals with a pretty big cluster of code and I wanted to see if I could simplify it a bit, so I did a reboot under the name Mirror."
+    ],
+    "order": "4",
+    "title": "Looking Glass Engine"
+  },
+  {
+    "id": "r7hws1GVFUzCSUyAlfip",
+    "text": [
+      "Mirror is a code rewrite of LGE with a smaller codebase and fewer classes. ",
+      "Unlike LGE stores that use RxJS streams, Mirror streams inherit from BehaviorSubjects making them fully compliant with RxJS.",
+      "It has proxies that behave like pure OOP classes with straight property setting and getting ",
+      "While it hasn't been tested as thoroughly it is significantly more streamlined than LGE an in some ways easier to use. "
+    ],
+    "order": "5",
+    "title": "Mirror",
+    "skips": []
+  },
+  {
+    "id": "NMDyjr3KBTFjRGWNmXzL",
+    "text": [
+      "Unlike Redux based systems (and hooks) LGE and Mirror both use evented updates under the hood. ",
+      "Changes do not happen inside a concrete reducers.",
+      "Instead they are submitted into a change pipeline inside an event container.",
+      "The event is itself a stream meaning, it can be modified, and even cancelled, directly by any listeners. ",
+      "These events can themselves be observed in transit for debugging purposes.",
+      "While you don't have to even be aware of this to use LGE or Mirror, when scenarios evolve in your app requiring non-linear thinking and interrupt-driven coding, having an evented state system gives you options that reducer based systems lack. ",
+      "For instance, because you can use stores as proxies for individual fields, you can design a field store to reject any updates to a single field that do not meet field requirements.",
+      "Or you can create field-level observers that emit (or erase) errors keyed to that field if the current value is invalid. ",
+      "The events are resolved synchronously; meaning their effects or their failures are available in real time. ",
+      "Further the events are returned by most actions, giving you an opportunity to observe the specific error that cancelled an event, if one exists. ",
+      "Again -- not something you need to understand or use; but it is something that is fundamentally different between reducer-based systems and Mirror. ",
+      "It is what allows updates to be curated rather than forced down your throat by a reducer function. "
+    ],
+    "title": "Evented updates",
+    "order": "6",
+    "skips": []
+  }
+]

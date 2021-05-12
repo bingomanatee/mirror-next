@@ -15,7 +15,7 @@ export default async function storyAPI(req, res) {
   console.log('req.method:', req.method);
   switch (req.method) {
     case 'DELETE':
-      const response = await db.collection('farm').doc(id).delete();
+      const response = await db.collection('narrative').doc(id).delete();
       out = res.status(200).json(response);
       break;
     case  'POST':
