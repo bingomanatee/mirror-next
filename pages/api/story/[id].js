@@ -15,25 +15,22 @@ export default async function storyAPI(req, res) {
   console.log('req.method:', req.method);
   switch (req.method) {
     case 'DELETE':
-      const response = await db.collection('narrative').doc(id).delete();
+      const response = await db.collection('narration').doc(id).delete();
       out = res.status(200).json(response);
       break;
     case  'POST':
       if (!Array.isArray(fields.skips)) {
         fields.skips = [];
       }
-      if (!Array.isArray(fields.image)) {
-        fields.image = [];
-      }
       if (id) {
         console.log('updating--- ', fields);
-        out = await db.collection("farm").doc(id).update(fields)
+        out = await db.collection("narration").doc(id).update(fields)
           .catch((err) => {
             console.log('error saving ', data, err);
           });
       } else {
         console.log('creating--- ', fields);
-        const response = await db.collection('farm').add(fields)
+        const response = await db.collection('narration').add(fields)
           .catch((err) => {
             console.log('error creating ', fields, err);
           });

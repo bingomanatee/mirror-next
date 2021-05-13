@@ -2,7 +2,7 @@ import { Box, Button } from "grommet";
 import React, { useEffect, useState } from "react";
 import {Play} from './NavButtons';
 
-export default ({nm, children}) => {
+const EnableAudio = ({nm, children}) => {
   const [audio, setAudio] = useState('unknown');
   useEffect(() => {
     nm.subscribe({
@@ -34,3 +34,5 @@ export default ({nm, children}) => {
   return '...'
 
 }
+
+export default EnableAudio;
