@@ -7,6 +7,7 @@ const EnableAudio = ({nm, children}) => {
   useEffect(() => {
     nm.subscribe({
       next({audioAvailable, audioEnabled}) {
+        console.log('nm -- audioAv:', audioAvailable, 'En:', audioEnabled);
         if (!audioAvailable) {
           setAudio('disabled');
         } else if (audioEnabled) {
@@ -20,14 +21,19 @@ const EnableAudio = ({nm, children}) => {
   }, [nm]);
   useEffect(() => {
     if (audio === 'enabled') {
+      console.log('---play');
       nm.$do.play();
     }
   }, [audio])
   if (audio === 'disabled' || audio === 'enabled') return children;
 
+  console.log('--ea: audio = ', audio);
   if (audio === 'available') {
     return <Box>
-      <Play onClick={() => nm.$do.setAudioEnabled(true)} i>Play Narrative</Play>
+      <Play onClick={() => {
+        console.log('setting audio enabled');
+        nm.$do.setAudioEnabled(true);
+      }} >Play Narrative</Play>
     </Box>
   }
 

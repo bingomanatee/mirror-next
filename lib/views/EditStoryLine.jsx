@@ -5,16 +5,25 @@ import Del from "./Del";
 import { Image } from "grommet-icons";
 
 const EditStoryLine = ({text, story, idx, sem}) => {
+/*  const [storyText, setStoryText] = useState(text.text);
+
+  useEffect(() => {
+    sem.subscribe({
+      next(val) {
+        storyText
+      }
+    })
+  }, [])*/
   return (
     <>
-      <div key={'story-' + story.id + '_text_' + idx} className={classes.editor__formRow}>
+      <div key={'story-' + story.identity + '_text_' + idx} className={classes.editor__formRow}>
         <label>
           <Box direction="row">
             <AddRow scale={2} className={classes.editor__addRow} onClick={() => sem.$do.addRow(idx + 1)}/>
             line {idx + 1}
           </Box>
         </label>
-        <TextArea rows="3" value={sem.$my.story.text[idx].text} onChange={sem.$do.change('text', idx)}/>
+        <TextArea rows="3" value={text.text} onChange={sem.$do.change('text', idx)}/>
         <Del scale={2} className={classes.editor__formRowDel} onClick={sem.$do.delText(idx)}/>
       </div>
       <div key={'story-' + story.id + '_image_' + idx} className={classes.editor__formRow + ' ' + classes.editor__formRow2}>
