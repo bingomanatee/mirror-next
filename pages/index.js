@@ -42,9 +42,6 @@ function getCols(size) {
 export default function Home({size}) {
 
   const router = useRouter();
-
-  console.log('size:', size);
-
   return (
     <Box fill={true} align="center" alignContent="center" justify="center" direction="column" as="section"
     >

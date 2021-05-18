@@ -16,10 +16,10 @@ export default function asButton(name, Base, Over, Down) {
     }
 
 
-    return <Box  {...hooks} fill={false} alignSelf="center" as="button" className="plain-button">
-      <Button {...props} onClick={click}/>
+    return <Box  fill={false} alignSelf="center" as="button" className="plain-button" {...hooks} >
+      <Button {...props}/>
       {(children) ?
-        <Text alignSelf="center" margin="small" size="small" onClick={click}>{children}</Text>
+        <Text alignSelf="center" margin="small" size="small">{children}</Text>
         : ''}
     </Box>
   }
@@ -41,10 +41,12 @@ export default function asButton(name, Base, Over, Down) {
     }, {
       actions: {
         click(store, e) {
+          console.log('>>>>> button click');
           if (store.$my.clicked) {
             return;
           }
           if (props.onClick) {
+            console.log('clicking with ', props.onClick);
             props.onClick(e);
           }
           const t = store.$trans();
@@ -52,9 +54,9 @@ export default function asButton(name, Base, Over, Down) {
             clearTimeout(store.$my.clickTimeout);
           }
           if (store.$my.clickTime !== 0) {
-            store.do.setClicked(true);
+            store.$do.setClicked(true);
             if (store.$my.clickTime > 0) {
-              store.do.setClickTimeout(setTimeout(store.$do.unfreezeClicked, store.$my.clickTime));
+              store.$do.setClickTimeout(setTimeout(store.$do.unfreezeClicked, store.$my.clickTime));
             }
           }
 
@@ -66,7 +68,7 @@ export default function asButton(name, Base, Over, Down) {
           }
           const t2 = store.$trans();
           store.$do.setClicked(false);
-          store.do.setClickTimeout(null);
+          store.$do.setClickTimeout(null);
           t2.complete();
         },
         hooks(store) {
@@ -91,6 +93,7 @@ export default function asButton(name, Base, Over, Down) {
               store.$do.click();
             },
             onMouseLeave(e) {
+              console.log('leaving');
               const t = store.$trans();
               store.$do.setOver(false);
               store.$do.setDown(false);
@@ -104,6 +107,6 @@ export default function asButton(name, Base, Over, Down) {
       }
     })
   }, (value, store, props) => {
-    return {...value, click: store.$do.click, hooks: store.$do.hooks()};
+    return {...value, hooks: store.$do.hooks()};
   })
 }

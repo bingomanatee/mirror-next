@@ -59,23 +59,6 @@ function Narrative({stories, size, nm}) {
           size: 'cover'
         }}
       >
-
-      </Box>
-
-      <Box gridArea="controls" direction="row"
-        justify="between"
-        pad="medium"
-        gap="medium"
-        align="stretch">
-        <Button plain={false}
-          onClick={() => router.push('/')}
-        >Home
-        </Button>
-        <Button primary
-          onClick={nm.$do.next}
-          plain={false}
-        >Next
-        </Button>
       </Box>
     </Grid>
   )

@@ -3,6 +3,7 @@
     <title>back-active</title>
     <g id="back-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <polygon id="Path-Copy-2" fill="#8E6117" points="0.754315535 51 16.2799674 59.1515525 78 80 97 6 92 1 71.4885251 75.2696414"></polygon>
-        <polygon id="Path-2-Copy-2" fill="#DFFB6F" points="0.728428425 51.0468229 92.357 1.42108547e-14 71.4853704 75"></polygon>
+        <path d="M92.357,0 L71.4853704,75 L0.728428425,51.0468229 L92.357,0 Z M71,19 L12,50 L58,64 L71,19 Z" id="Combined-Shape" fill="#DFFB6F"></path>
+        <polygon id="Path-8" fill="#8E6117" points="71 19 12 50 18 52 69 26"></polygon>
     </g>
 </svg>

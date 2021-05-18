@@ -60,3 +60,9 @@ h1, h2, h3 {
 .plain-button {
   all: unset;
 }
+
+.float-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

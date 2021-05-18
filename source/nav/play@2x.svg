@@ -2,7 +2,7 @@
 <svg width="85px" height="78px" viewBox="0 0 85 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>play@2x</title>
     <defs>
-        <path d="M20.5938239,0 L84,51.0468229 L0,75 L20.5938239,0 Z M32.729216,16 L19,66 L75,50.0312153 L32.729216,16 Z" id="path-1"></path>
+        <polygon id="path-1" points="84 51.0468229 20.5938239 0 0 75"></polygon>
         <filter x="-12.5%" y="-14.0%" width="125.0%" height="128.0%" filterUnits="objectBoundingBox" id="filter-2">
             <feMorphology radius="6" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
             <feGaussianBlur stdDeviation="7" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
@@ -12,10 +12,10 @@
         </filter>
     </defs>
     <g id="play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Path" fill="#606060" points="84.1522321 51 80.2255546 57.1515525 10.8100001 77.6866408 0 75.2696414"></polygon>
-        <g id="Combined-Shape" fill="black" fill-opacity="1">
-            <use filter="url(#filter-2)" xlink:href="#path-1"></use>
+        <polygon id="Path" fill-opacity="0.645104895" fill="#000000" points="84.1522321 51 80.2255546 57.1515525 10.8100001 77.6866408 0 75.2696414"></polygon>
+        <g id="Path-2">
+            <use fill-opacity="0.801245629" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
         </g>
-        <polygon id="Path-3" fill="#606060" points="75 50 33 16 31 23 19 67 26.3433339 64.7969998 37 27 69 52"></polygon>
     </g>
 </svg>

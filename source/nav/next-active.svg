@@ -3,6 +3,7 @@
     <title>next-active</title>
     <g id="next-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <polygon id="Path" fill="#8E6117" points="84.1522321 51 80.2255546 57.1515525 10.8100001 77.6866408 0 75.2696414"></polygon>
-        <polygon id="Path-2" fill="#DFFB6F" points="84 51.0468229 20.5938239 0 0 75"></polygon>
+        <path d="M20.5938239,1.42108547e-14 L84,51.0468229 L0,75 L20.5938239,1.42108547e-14 Z M32.729216,16 L19,66 L75,50.0312153 L32.729216,16 Z" id="Combined-Shape" fill="#DFFB6F"></path>
+        <polygon id="Path-3" fill="#8E6117" points="75 50 33 16 31 23 19 67 26.3433339 64.7969998 37 27 69 52"></polygon>
     </g>
 </svg>

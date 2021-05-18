@@ -8,7 +8,6 @@ const ComicPane = ({line}) => {
   const [visibility, setClassName] = useState('hidden');
 
   if (!line) {
-    console.log('no line', line);
     return '';
   }
 

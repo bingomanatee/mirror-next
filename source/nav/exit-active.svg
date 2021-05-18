@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="77px" viewBox="0 0 75 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>exit-active</title>
+    <defs>
+        <polygon id="path-1" points="46.2659705 14.1964681 7.24543402 41.2250306 0 25.3051698 32.0048833 -2.86056113e-16"></polygon>
+    </defs>
+    <g id="exit-active" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M70,35 L70.118,35.071 L70.192,35.001 L71.716,36.03 L75,38 L74.847,38.142 L75,38.2469136 L33.5064935,77 L33.362,76.663 L33,77 L29,73 L70,35 Z M11.0649351,29.7407407 L13.788,36.13 L4,54.4691358 L4,54 L4,54 L0,50 C2.66666667,44 4,41.3333333 4,42 L4,42.975 L11.0649351,29.7407407 Z M53,0 L57,4 L57.4805195,4 L54.038,5.317 L48,8 L47.684,7.747 L37.502,11.641 L32.2727273,8.11111111 L43.007,4.005 L43,4 L53,0 Z" id="Combined-Shape" fill="#8E6117"></path>
+        <polygon id="Path-4-Copy" fill="#DFFB6F" points="71 34.2469136 32.2727273 8.11111111 53.4805195 0 0 1.4258142e-15 0 50.4691358 11.0649351 29.7407407 29.5064935 73"></polygon>
+        <g id="Combined-Shape" transform="translate(14.115730, 22.293046)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <path d="M24.6050573,-1 L28.5904075,-0.439895568 L26.256559,16.165 L42.8622645,18.4994984 L42.30216,22.4848485 L25.696559,20.15 L23.3627661,36.7567055 L19.377416,36.1966011 L21.710559,19.59 L5.10555898,17.2572071 L5.66566341,13.271857 L22.270559,15.605 L24.6050573,-1 Z" fill="#8E6117" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
