@@ -1,6 +1,6 @@
 import styles from '../styles/Home2.module.css'
 import {useRouter} from 'next/router'
-import {Box, Grid} from 'grommet';
+import {Box, Heading, Text, Grid} from 'grommet';
 import Link from 'next/link';
 import Option from "../lib/views/Option";
 
@@ -56,7 +56,8 @@ export default function Home({size}) {
         columns={getCols(size)}
       >
         <Option gridArea="narrative">
-          Narrative: Why there is Mirror
+          <Heading level={2}>State is a funny thing</Heading>
+          <Text size="large">The origins of Mirror: an audio slideshow</Text>
         </Option>
         <Option gridArea="mirror">
           About Mirror: examples, guide, and API

@@ -4,7 +4,7 @@ import { MirrorCollection } from '@wonderlandlabs/mirror';
 import withStore from "./withStore";
 
 export default function asButton(name, Base, Over, Down) {
-  function ButtonComponent({store, over, out, down, hooks, active, disabled, children, click, ...props}) {
+  function ButtonComponent({store, over, out, down, hooks, active, disabled, children, click, labelSize = 'small', buttonProps={},  ...props}) {
     /**
      * a component that displays one or more sub-elements depending on the
      */
@@ -16,10 +16,10 @@ export default function asButton(name, Base, Over, Down) {
     }
 
 
-    return <Box  fill={false} alignSelf="center" as="button" className="plain-button" {...hooks} >
+    return <Box  fill={false} alignSelf="center" as="button" className="plain-button" {...buttonProps} {...hooks} >
       <Button {...props}/>
       {(children) ?
-        <Text alignSelf="center" margin="small" size="small">{children}</Text>
+        <Text alignSelf="center" margin="small" size={labelSize || 'small'}>{children}</Text>
         : ''}
     </Box>
   }
