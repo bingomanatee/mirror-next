@@ -13,6 +13,7 @@ const ComicPanelSized = withSize()(ComicPanel);
 function Narrative({stories, size, nm}) {
 
   useEffect(() => {
+    console.log('stories:', stories);
     if (stories && stories.length && !nm.$my.currentStoryId) {
       const firstStory = stories.reduce((first, next) => {
         if (!first) {

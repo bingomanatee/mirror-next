@@ -23,7 +23,6 @@ const EnableAudio = ({nm, children}) => {
   }, [nm]);
   useEffect(() => {
     if (audio === 'enabled') {
-      console.log('---play');
       nm.$do.play();
     }
   }, [audio])
